@@ -1,0 +1,15 @@
+.main-text {
+	color: var(--color-white);
+	font-family: $ff;
+	font-weight: 400;
+	line-height: 26px;
+	&--lg {
+		font-size: 22px;
+		@media (max-width: $md2+px) {
+			font-size: 18px;
+		}
+	}
+	&--sm {
+		font-size: 15px;
+	}
+}
