@@ -15,19 +15,32 @@
 //* -- //
 // -- //
 
-//* Partials
+// Partials
+//* Sections
 //? Header
 @import "partials/header/_header.scss";
 
 //? Hero
-@import "partials/hero/hero.scss";
+@import "partials/hero/_hero.scss";
 
 //? Footer
 @import "partials/footer/_footer.scss";
+//* -- //
 
-//? Components
+//* Components
 @import "partials/common/_logo.scss";
 @import "partials/common/_main-text.scss";
 @import "partials/common/_main-heading.scss";
 @import "partials/common/_main-btn.scss";
+
+// header
+@import "partials/header/components/_nav.scss";
+@import "partials/header/components/_social.scss";
+@import "partials/header/components/_burger.scss";
+
 //* -- //
+// -- //
+
+.body {
+	background-color: #191919;
+}
