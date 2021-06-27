@@ -1,5 +1,6 @@
 // Burger Menu
 let menuIsOpen = false;
+
 if (mediaMobile.matches) {
 	nav.setAttribute('aria-hidden', true);
 }
@@ -39,6 +40,10 @@ const burgerMenuSwitch = () => {
 	}
 }
 
-burgerBtn.addEventListener('click', () => {
-	burgerMenuSwitch();
+headerContainer.addEventListener('click', (e) => {
+	if (e.target.classList.contains('burger')) {
+		burgerMenuSwitch();
+	} else if (e.target.classList.contains('nav__link')) {
+		burgerMenuClose();
+	}
 })
