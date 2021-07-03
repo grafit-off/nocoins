@@ -46,6 +46,9 @@
 .main-content {
 	flex: 1 0 auto;
 	overflow: hidden;
+	@media (max-width: $md3+px) {
+		overflow: visible;
+	}
 }
 
 .footer {

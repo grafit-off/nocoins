@@ -7,21 +7,41 @@
 
 	padding-top: 150px;
 	background: url(../img/BG.jpg) center/cover no-repeat;
+	@media (max-width: $md3+px) {
+		position: relative;
+	}
 	&__container {
+		position: relative;
 		display: flex;
 		align-items: center;
-		margin-bottom: 200px;
+		justify-content: space-between;
+
+		width: 100%;
+		margin-bottom: 150px;
+		@include maxwidth(900) {
+			position: relative;
+		}
+		@media (max-width: $md3+px) {
+			position: static;
+		}
 	}
 	&__social {
 		display: none;
+		margin-bottom: 48px;
+		@include maxwidth(1100) {
+			display: flex;
+		}
 	}
 
 	&__info {
-		max-width: 720px;
+		@include minwidth(768) {
+			max-width: 650px;
+		}
 	}
 
 	&__heading {
 		margin-bottom: 40px;
+
 		text-align: left;
 		span {
 			display: block;
@@ -29,29 +49,76 @@
 		}
 	}
 	&__links {
+		@include maxwidth(580) {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
 	}
 	&__link {
 		&:not(:last-child) {
 			margin-right: 30px;
+			@include maxwidth(580) {
+				margin-right: 0;
+				margin-bottom: 30px;
+			}
 		}
 	}
 
 	&__block-image {
 		position: relative;
+		flex: 0 0 40%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		&::before {
 			content: "";
 			position: absolute;
-			top: 0;
-			left: 0;
-			z-index: 2;
-			width: 100%;
-			height: 100%;
-			background-color: var(--color-gren);
-			// filter: blur(260px);
+			top: 50%;
+			left: 50%;
+
+			width: 50%;
+			height: 50%;
+
+			background-color: var(--color-green);
+			filter: blur(200px);
+
+			transform: translate(-50%, -50%);
+		}
+		@include maxwidth(1100) {
+			flex: 0 0 30%;
+			align-self: flex-end;
+		}
+		@include maxwidth(900) {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			transform: translateX(30%);
+		}
+
+		@media (max-width: $md3+px) {
+			left: 50%;
+			transform: translate(-50%, 50%);
+			&::before {
+				filter: blur(100px);
+			}
 		}
 	}
 
 	&__img {
+		position: relative;
+		z-index: 1;
 		display: block;
+		width: 340px;
+		height: 430px;
+		object-fit: contain;
+		@include maxwidth(1100) {
+			width: 300px;
+			height: 340px;
+		}
+		@media (max-width: $md3+px) {
+			width: 220px;
+			height: 300px;
+		}
 	}
 }

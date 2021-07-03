@@ -21,6 +21,10 @@
 			fill: var(--color-white);
 			transition: fill 0.3s ease;
 		}
+		&--hero {
+			width: 40px;
+			height: 24px;
+		}
 		@media (any-hover: hover) {
 			&:hover {
 				svg {
