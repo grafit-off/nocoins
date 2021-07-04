@@ -1,0 +1,121 @@
+.pluses {
+	padding: 120px 0;
+	background-color: var(--color-dark-grey);
+	@media (max-width: $md3+px) {
+		padding-top: 240px;
+	}
+	&__container {
+	}
+
+	&__heading {
+		margin-bottom: 120px;
+		@media (max-width: $md1+px) {
+			margin-bottom: 90px;
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 75px;
+		@include maxwidth(1050) {
+			justify-content: center;
+		}
+		@media (max-width: $md3+px) {
+			flex-direction: column;
+		}
+	}
+
+	&__item {
+		flex: 0 0 calc(33.33% - 33.33px);
+		&:not(:last-child) {
+			margin-right: 50px;
+		}
+		@media (max-width: $md1+px) {
+			flex: 0 0 calc(33.33% - 20px);
+			&:not(:last-child) {
+				margin-right: 30px;
+			}
+		}
+		@include maxwidth(1050) {
+			flex: 0 0 calc(50% - 25px);
+			&:not(:last-child) {
+				margin-right: 0;
+			}
+			&:not(:nth-child(2n - 2)) {
+				margin-right: 50px;
+			}
+			&:not(:nth-last-child(-n + 1)) {
+				margin-bottom: 50px;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		@media (max-width: $md3+px) {
+			&:not(:last-child) {
+				margin-right: 0;
+			}
+			&:not(:nth-child(2n - 2)) {
+				margin-right: 0;
+			}
+			&:not(:nth-last-child(-n + 1)) {
+				margin-bottom: 0;
+			}
+			&:not(:last-child) {
+				margin-bottom: 60px;
+			}
+		}
+	}
+
+	&__links {
+		text-align: center;
+	}
+
+	&__link {
+		display: inline-block;
+		max-width: 223px;
+		padding: 18px 36px;
+
+		background-color: var(--color-timber-green);
+		border-radius: 8px;
+
+		text-align: center;
+
+		transition: background-color 0.3s ease;
+		&:not(:last-child) {
+			margin-right: 40px;
+		}
+		strong {
+			font-weight: 700;
+		}
+		&:focus {
+			background-color: #1e5d67;
+			box-shadow: 0 0 0 3px #46eb4f;
+		}
+		&:focus:not(:focus-visible) {
+			border-radius: 8px;
+			background-color: #1e5d67;
+			transition: background-color 0.3s ease;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #1e5d67;
+				transition: background-color 0.3s ease;
+			}
+		}
+		@media (max-width: $md3+px) {
+			display: block;
+
+			max-width: 400px;
+			&:not(:last-child) {
+				margin-right: auto;
+				margin-left: auto;
+				margin-bottom: 20px;
+			}
+			margin-right: auto;
+			margin-left: auto;
+		}
+	}
+}

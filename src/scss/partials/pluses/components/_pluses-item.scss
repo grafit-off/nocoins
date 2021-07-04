@@ -1,0 +1,48 @@
+.pluses-item {
+	display: flex;
+	align-items: center;
+	&--tip {
+		&::before {
+			background: url(../img/pluses1.svg) center/contain no-repeat;
+		}
+	}
+	&--analitic {
+		&::before {
+			background: url(../img/pluses2.svg) center/contain no-repeat;
+		}
+	}
+	&--guest {
+		&::before {
+			background: url(../img/pluses3.svg) center/contain no-repeat;
+		}
+	}
+	&::before {
+		content: "";
+		flex: 0 0 118px;
+		display: inline-block;
+		width: 118px;
+		height: 118px;
+		margin-right: 30px;
+		@media (max-width: $md1+px) {
+			flex: 0 0 85px;
+			width: 85px;
+			height: 85px;
+		}
+		@media (max-width: $md3+px) {
+			flex: 0 0 65px;
+			width: 65px;
+			height: 65px;
+		}
+	}
+	&__info {
+	}
+	&__heading {
+		margin-bottom: 15px;
+		@media (max-width: $md3+px) {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__text {
+	}
+}
