@@ -4,5 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	//* @include('components/resources/_scrollLockIOS.js');
 	//* @include('components/_burgerMenu.js');
 	//* @include('components/_headerScroll.js');
+	//* @include('components/_swiper.js');
 	//? -- //
 });

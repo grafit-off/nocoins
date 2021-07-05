@@ -42,16 +42,18 @@
 		top: 0;
 		left: 0;
 
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
 		width: 100%;
 		height: 100%;
 		min-height: 100vh;
 		overflow-y: auto;
 
 		background-color: rgba(26, 50, 54, 0.95);
-		@supports (backdrop-filter: blur(10px)) {
-			backdrop-filter: blur(10px);
-		}
 
+		will-change: transform;
 		transform: translateX(100%);
 		transition: transform 0.3s ease;
 	}

@@ -1,0 +1,26 @@
+.simple {
+	padding: 120px 0;
+	overflow: hidden;
+	background-color: var(--color-black);
+	&__container {
+	}
+
+	&__heading {
+		margin-bottom: 80px;
+		@media (max-width: $md4+px) {
+			margin-bottom: 60px;
+		}
+	}
+
+	&__swiper {
+		margin-bottom: 30px;
+	}
+
+	&__text {
+		max-width: 400px;
+		margin: 0 auto;
+
+		color: var(--color-green);
+		text-align: center;
+	}
+}
