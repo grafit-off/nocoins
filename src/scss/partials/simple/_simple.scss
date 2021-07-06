@@ -14,6 +14,9 @@
 
 	&__swiper {
 		margin-bottom: 30px;
+		&--platform {
+			margin-bottom: 0;
+		}
 	}
 
 	&__text {

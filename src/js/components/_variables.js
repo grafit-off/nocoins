@@ -10,5 +10,5 @@ const nav = document.querySelector('.nav');
 const mediaMobile = window.matchMedia("(max-width: 767px)");
 const header = document.querySelector('.header');
 const hero = document.querySelector('.hero');
-const swiperSelector = document.querySelector(".swiper");
-let swiper;
+const swiperSimpleSelector = document.querySelector(".simple__swiper");
+const swiperPlatformSelector = document.querySelector('.simple__swiper--platform');

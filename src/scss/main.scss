@@ -26,7 +26,7 @@
 //* Sections
 //? Header
 @import "partials/header/_header.scss";
-
+// Components
 @import "partials/header/components/_nav.scss";
 @import "partials/header/components/_social.scss";
 @import "partials/header/components/_burger.scss";
@@ -34,16 +34,26 @@
 
 //? Hero
 @import "partials/hero/_hero.scss";
+//? -- /
 
 //? Pluses
 @import "partials/pluses/_pluses.scss";
+// Components
 @import "partials/pluses/components/_pluses-item.scss";
+//? -- /
 
 //? Simple
 @import "partials/simple/_simple.scss";
+// Components
 @import "partials/simple/components/_swiper.scss";
 @import "partials/simple/components/_slide.scss";
+//? -- /
+
+//? Banner
+@import "partials/banner/_banner.scss";
+//? -- /
 
 //? Footer
 @import "partials/footer/_footer.scss";
+//? -- /
 //* -- //

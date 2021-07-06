@@ -1,9 +1,12 @@
 .swiper {
 	position: relative;
 	z-index: 1;
-	padding-bottom: 30px;
 
 	width: 100%;
+	@media (max-width: $md3+px) {
+		padding-bottom: 30px;
+	}
+
 	&__pagination {
 		position: absolute;
 		bottom: 0px;

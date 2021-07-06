@@ -1,0 +1,18 @@
+.banner {
+	padding: 80px 0;
+	background: url(../img/banner-bg.jpg) center/cover no-repeat;
+	@media (max-width: $md4+px) {
+		padding: 60px 0;
+	}
+	&__container {
+	}
+
+	&__text {
+		margin-bottom: 15px;
+	}
+
+	&__heading {
+		max-width: 790px;
+		text-align: left;
+	}
+}
