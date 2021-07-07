@@ -16,6 +16,9 @@
 		display: flex;
 		flex-wrap: wrap;
 		margin-bottom: 75px;
+		&--conditions {
+			margin-bottom: 0;
+		}
 		@include maxwidth(1050) {
 			justify-content: center;
 		}

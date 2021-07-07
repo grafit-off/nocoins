@@ -5,5 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	//* @include('components/_burgerMenu.js');
 	//* @include('components/_headerScroll.js');
 	//* @include('components/_swiper.js');
+	//* @include('components/_accordion.js');
 	//? -- //
 });

@@ -1,0 +1,101 @@
+.accordion {
+	max-width: 650px;
+	width: 100%;
+	margin: 0 auto;
+	&__item {
+		padding: 15px 30px;
+
+		border-radius: 8px;
+		border: 2px solid var(--color-timber-green);
+		background-color: var(--color-timber-green);
+		transition: background-color 0.3s ease;
+		&:not(:last-child) {
+			margin-bottom: 40px;
+			@media (max-width: $md4+px) {
+				margin-bottom: 20px;
+			}
+		}
+		@media (max-width: $md4+px) {
+			padding: 15px;
+		}
+		&--active {
+			background-color: transparent;
+			transition: background-color 0.3s ease;
+		}
+	}
+	&__heading {
+	}
+	&__trigger {
+		position: relative;
+
+		width: 100%;
+		height: 100%;
+
+		padding-right: 40px;
+
+		border-radius: 5px;
+		color: var(--color-white);
+
+		text-align: left;
+
+		transition: box-shadow 0.3s ease;
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 0;
+
+			width: 18px;
+			height: 2px;
+
+			background-color: var(--color-green);
+			transform: translateY(-50%);
+			transition: transform 0.2s ease-out;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 0;
+
+			width: 2px;
+			height: 18px;
+
+			background-color: var(--color-green);
+			transform: translate(-8px, -50%);
+		}
+		&:focus {
+			box-shadow: 0 0 0 3px #8af081;
+			transition: box-shadow 0.3s ease;
+		}
+		&--active::after {
+			transform: translateY(-50%) rotate(180deg);
+			transition: transform 0.2s ease-out;
+		}
+		&--active::before {
+			transform: translate(-8px, -50%) rotate(270deg);
+			transition: transform 0.2s ease-out;
+		}
+		@media (max-width: $md4+px) {
+			padding-right: 30px;
+
+			font-size: 15px;
+			font-weight: 500;
+			line-height: 18px;
+		}
+	}
+	&__body {
+		height: 0px;
+		overflow: hidden;
+
+		transition: height 500ms ease;
+		&--hidden {
+			visibility: hidden;
+		}
+	}
+	&__content {
+		padding-right: 40px;
+		margin-top: 15px;
+		color: var(--color-white);
+	}
+}

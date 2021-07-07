@@ -1,0 +1,17 @@
+.faq {
+	padding: 120px 0;
+	background-color: var(--color-black);
+
+	&__container {
+	}
+
+	&__heading {
+		margin-bottom: 80px;
+		@media (max-width: $md4+px) {
+			margin-bottom: 60px;
+		}
+	}
+
+	&__accordion {
+	}
+}

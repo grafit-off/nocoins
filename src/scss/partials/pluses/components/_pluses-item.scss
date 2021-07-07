@@ -16,6 +16,21 @@
 			background: url(../img/pluses3.svg) center/contain no-repeat;
 		}
 	}
+	&--card {
+		&::before {
+			background: url(../img/card.svg) center/contain no-repeat;
+		}
+	}
+	&--percent {
+		&::before {
+			background: url(../img/percent.svg) center/contain no-repeat;
+		}
+	}
+	&--free {
+		&::before {
+			background: url(../img/free.svg) center/contain no-repeat;
+		}
+	}
 	&::before {
 		content: "";
 		flex: 0 0 118px;
