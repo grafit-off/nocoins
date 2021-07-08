@@ -1,6 +1,6 @@
 .burger {
 	position: relative;
-	z-index:1;
+	z-index: 1;
 
 	width: 30px;
 	height: 20px;
@@ -15,7 +15,7 @@
 		height: 2px;
 
 		background-color: var(--color-white);
-		transition: transform 0.3s ease, top 0.3s ease;
+		transition: transform 0.3s ease 0.1s, top 0.3s ease 0.1s;
 	}
 	&::after {
 		content: "";
@@ -27,7 +27,7 @@
 		height: 2px;
 
 		background-color: var(--color-white);
-		transition: transform 0.3s ease, bottom 0.3s ease;
+		transition: transform 0.3s ease 0.1s, bottom 0.3s ease 0.1s;
 	}
 	&__line {
 		position: absolute;
@@ -37,7 +37,7 @@
 		height: 2px;
 		background-color: var(--color-white);
 		transform: translateY(-50%);
-		transition: opacity 0.3s ease;
+		transition: opacity 0.3s ease 0.1s;
 	}
 	&--active {
 		&::before {

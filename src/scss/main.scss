@@ -11,7 +11,7 @@
 @import "resources/_settings.scss";
 
 //* Reset classes
-@import "resources/reset-classes.scss";
+@import "resources/_reset-classes.scss";
 //* -- //
 // -- //
 
@@ -57,7 +57,10 @@
 @import "partials/faq/_faq.scss";
 // Components
 @import "partials/faq/components/_accordion.scss";
-// @import "partials/faq/components/_slide.scss";
+//? -- /
+
+//? Settings
+@import "partials/settings/_settings.scss";
 //? -- /
 
 //? Footer
