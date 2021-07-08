@@ -43,7 +43,7 @@ const burgerMenuSwitch = () => {
 headerContainer.addEventListener('click', (e) => {
 	if (e.target.classList.contains('burger')) {
 		burgerMenuSwitch();
-	} else if (e.target.classList.contains('nav__link')) {
-		burgerMenuClose();
+	} else if (e.target.classList.contains('nav__link') && window.innerWidth < 768) {
+		burgerMenuSwitch();
 	}
 })
