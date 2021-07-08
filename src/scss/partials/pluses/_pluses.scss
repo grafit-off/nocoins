@@ -1,8 +1,12 @@
 .pluses {
 	padding: 120px 0;
 	background-color: var(--color-dark-grey);
+
 	@media (max-width: $md3+px) {
 		padding-top: 240px;
+		&--conditions {
+			padding: 120px 0;
+		}
 	}
 
 	&__heading {
