@@ -25,15 +25,17 @@ if (!isSmoothScrollSupported) {
 	};
 
 	const scrollTo = () => {
-		const links = document.querySelectorAll('[data-scroll]');
+		const links = document.querySelectorAll('a[href]');
 
 		links.forEach(each => {
 			each.addEventListener('click', function (e) {
-				e.preventDefault();
-				const currentTarget = this.getAttribute('href');
-				setTimeout(() => {
-					smoothScroll(currentTarget, 1000, '.header');
-				}, 200);
+				if (each.getAttribute('href')[0] === '#') {
+					e.preventDefault();
+					const currentTarget = this.getAttribute('href');
+					setTimeout(() => {
+						smoothScroll(currentTarget, 1000, '.header');
+					}, 200);
+				}
 			});
 		});
 	};

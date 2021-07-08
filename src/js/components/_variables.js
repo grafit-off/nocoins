@@ -13,4 +13,5 @@ const hero = document.querySelector('.hero');
 const swiperSimpleSelector = document.querySelector(".simple__swiper");
 const swiperPlatformSelector = document.querySelector('.simple__swiper--platform');
 let isSmoothScrollSupported = 'scrollBehavior' in document.documentElement.style;
+let isMobileDevice = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
 

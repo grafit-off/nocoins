@@ -1,10 +1,36 @@
-/* // Example
-[data-animation="from-left"] {
-	transform: translate(-100%, 0);
-	transition: transform 0.3s ease;
+// Example
+
+@include minwidth(769) {
+	[data-animation="from-left"] {
+		transform: translate(-100vw, 0);
+		transition: transform 0.3s ease;
+	}
+	[data-animation="from-left"].animated {
+		transform: translate(0, 0);
+		transition: transform 0.3s ease;
+	}
+
+	[data-animation="from-right"] {
+		transform: translate(100vw, 0);
+		transition: transform 0.3s ease;
+	}
+	[data-animation="from-right"].animated {
+		transform: translate(0, 0);
+		transition: transform 0.3s ease;
+	}
+	.hero__block-image.animated {
+		@include maxwidth(900) {
+			transform: translateX(30%);
+		}
+	}
+	[data-animation="from-bottom"] {
+		opacity: 0;
+		transform: translate(0, 200px);
+		transition: transform 0.5s ease, opacity 0.5s ease;
+	}
+	[data-animation="from-bottom"].animated {
+		opacity: 1;
+		transform: translate(0, 0);
+		transition: transform 0.5s ease, opacity 0.5s ease;
+	}
 }
-[data-animation="from-left"].animated {
-	transform: translate(0, 0);
-	transition: transform 0.3s ease;
-}
-*/
